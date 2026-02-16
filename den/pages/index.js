@@ -340,7 +340,7 @@ useEffect(() => {
         {/* Hero Section */}
         <section className="relative bg-blue-300 min-h-screen flex items-center justify-center -mt-12 pt-12">
           {/* Background Image with Gradient Overlay */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 ">
             <Image
               src="/hero.png"
               alt="Modern dental clinic interior"
@@ -352,7 +352,7 @@ useEffect(() => {
           </div>
 
           {/* Hero Content */}
-          <div className="container-custom relative z-10 text-white py-20">
+          <div className="container-custom relative z-10 text-white py-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 Trusted Family & Cosmetic Dentist in Fresno, CA 
@@ -362,14 +362,20 @@ useEffect(() => {
               </p>
               
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 mb-10">
-                <Link href="/appointment" className="btn-primary text-[#0194d0] bg-white text-lg px-8 py-4">
-                  Schedule Your Visit
-                </Link>
-                <a href="tel:+15592444277" className="btn-secondary text-[#0194d0] bg-white text-lg px-8 py-4">
-                  Call Now
-                </a>
-              </div>
+<div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10">
+  <Link 
+    href="/appointment" 
+    className="btn-primary text-[#0194d0] bg-white text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4"
+  >
+    Schedule Your Visit
+  </Link>
+  <a 
+    href="tel:+15592444277" 
+    className="btn-secondary text-[#0194d0] bg-white text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4"
+  >
+    Call Now
+  </a>
+</div>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap gap-6">
@@ -567,12 +573,12 @@ useEffect(() => {
             {/* CTA Button */}
             <div className="text-center mt-10 md:mt-12">
               <Link 
-                href="/appointment" 
-                className="inline-flex items-center gap-3 bg-[#0194d0] text-white px-6 md:px-10 py-3 md:py-5 rounded-full font-semibold text-base md:text-lg hover:bg-[#017ab0] transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                Book Your Visit at Rio Family Dental
-                <FaArrowRight className="text-xs md:text-sm" />
-              </Link>
+  href="/appointment" 
+  className="inline-flex items-center gap-2 md:gap-3 bg-[#0194d0] text-white px-4 md:px-6 lg:px-10 py-2.5 md:py-4 lg:py-5 rounded-full font-semibold text-sm md:text-base lg:text-lg hover:bg-[#017ab0] transition-all transform hover:scale-105 shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl"
+>
+  Book Your Visit at Rio Family Dental
+  <FaArrowRight className="text-[10px] md:text-xs lg:text-sm" />
+</Link>
               <p className="text-gray-500 mt-3 md:mt-4 text-sm md:text-base">✨ No insurance? Ask about our membership plan</p>
             </div>
           </div>
@@ -594,240 +600,235 @@ useEffect(() => {
   </div>
 
   <div className="container-custom relative z-10">
-    {/* Section Header with Unique Design */}
-    <div className="text-center mb-16">
-      <div className="inline-flex items-center gap-2 bg-[#0194d0]/10 px-4 py-2 rounded-full mb-6">
-        <div className="w-2 h-2 bg-[#0194d0] rounded-full animate-pulse"></div>
-        <span className="text-[#0194d0] font-semibold text-sm uppercase tracking-wider">Our Expertise</span>
-      </div>
-      
-      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-        Comprehensive Dental Services
-      </h2>
-      
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-        From routine checkups to complete smile makeovers, 
-        we provide everything you need for optimal oral health
-      </p>
-    </div>
+    {/* Section Header with Unique Design - Mobile Optimized */}
+<div className="text-center mb-10 md:mb-16">
+  <div className="inline-flex items-center gap-1.5 md:gap-2 bg-[#0194d0]/10 px-3 md:px-4 py-1.5 md:py-2 rounded-full mb-4 md:mb-6">
+    <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#0194d0] rounded-full animate-pulse"></div>
+    <span className="text-[#0194d0] font-semibold text-xs md:text-sm uppercase tracking-wider">Our Expertise</span>
+  </div>
+  
+  <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-6 px-2">
+    Comprehensive Dental Services
+  </h2>
+  
+  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+    From routine checkups to complete smile makeovers, 
+    we provide everything you need for optimal oral health
+  </p>
+</div>
 
-    {/* Featured Service - Full Width Banner */}
-    <div className="relative mb-16 group">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0194d0] to-[#01d09e] rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-      <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0194d0]/5 rounded-full translate-x-32 -translate-y-32"></div>
-        
-        {/* Grid with responsive ordering - text left, image right on all devices */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Text Content - Left side */}
-          <div className="order-1">
-            <div className="inline-flex items-center gap-2 bg-[#0194d0]/10 px-3 py-1 rounded-full mb-4">
-              <FaStar className="text-[#0194d0] text-sm" />
-              <span className="text-[#0194d0] font-medium text-sm">Patient Favorite</span>
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Same-Day Emergency Care
-            </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              Dental emergency? We're here for you 24/7 with immediate care, 
-              pain relief, and flexible payment options.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/emergency" className="group inline-flex items-center gap-2 bg-[#0194d0] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#017ab0] transition-all transform hover:scale-105 shadow-lg">
-                <FaAmbulance className="text-lg" />
-                Emergency Care
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <a href="tel:+15592444277" className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all">
-                <FaPhone className="text-[#01d09e]" />
-                (555) 123-4567
-              </a>
-            </div>
+{/* Featured Service - Full Width Banner - Mobile Optimized */}
+<div className="relative mb-10 md:mb-16 group">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#0194d0] to-[#01d09e] rounded-2xl md:rounded-3xl blur-lg md:blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
+  <div className="relative bg-white rounded-2xl md:rounded-3xl p-5 md:p-8 lg:p-12 shadow-xl md:shadow-2xl overflow-hidden">
+    <div className="absolute top-0 right-0 w-40 md:w-64 h-40 md:h-64 bg-[#0194d0]/5 rounded-full translate-x-16 md:translate-x-32 -translate-y-16 md:-translate-y-32"></div>
+    
+    {/* Grid with responsive ordering - text left, image right on all devices */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 items-center">
+      {/* Text Content - Left side */}
+      <div className="order-1">
+        <div className="inline-flex items-center gap-1.5 md:gap-2 bg-[#0194d0]/10 px-2.5 md:px-3 py-1 rounded-full mb-3 md:mb-4">
+          <FaStar className="text-[#0194d0] text-xs md:text-sm" />
+          <span className="text-[#0194d0] font-medium text-xs md:text-sm">Patient Favorite</span>
+        </div>
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
+          Same-Day Emergency Care
+        </h3>
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 md:mb-6">
+          Dental emergency? We're here for you 24/7 with immediate care, 
+          pain relief, and flexible payment options.
+        </p>
+        <div className="flex flex-wrap gap-3 md:gap-4">
+          <Link href="/emergency" className="group inline-flex items-center gap-1.5 md:gap-2 bg-[#0194d0] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs sm:text-sm md:text-base hover:bg-[#017ab0] transition-all transform hover:scale-105 shadow-md md:shadow-lg">
+            <FaAmbulance className="text-sm md:text-lg" />
+            <span>Emergency Care</span>
+            <FaArrowRight className="text-xs md:text-sm group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <a href="tel:+15592444277" className="inline-flex items-center gap-1.5 md:gap-2 bg-gray-100 text-gray-700 px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs sm:text-sm md:text-base hover:bg-gray-200 transition-all">
+            <FaPhone className="text-[#01d09e] text-sm md:text-lg" />
+            <span>(555) 123-4567</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Image - Right side */}
+      <div className="order-2 relative h-[150px] sm:h-[180px] md:h-[220px] lg:h-[250px] rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          alt="Emergency dental care"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">
+          <div className="flex items-center gap-1.5 md:gap-2 text-white">
+            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <span className="font-semibold text-xs md:text-sm">Available 24/7 - Call Now</span>
           </div>
-{/* Image - Right side */}
-          <div className="order-2 relative h-[200px] md:h-[250px] rounded-2xl overflow-hidden shadow-xl">
-            <img
-              src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-              alt="Emergency dental care"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 right-4">
-              <div className="flex items-center gap-2 text-white">
-                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                <span className="font-semibold text-sm md:text-base">Available 24/7 - Call Now</span>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </div>
     </div>
-
+  </div>
+</div>
     {/* Service Cards Grid - Unique Design */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
-      {[
-        {
-          icon: <FaTooth className="text-2xl" />,
-          title: "General Dentistry",
-          description: "Preventive care, cleanings, and routine exams for lasting oral health",
-          features: ["Comprehensive Exams", "Professional Cleaning", "Oral Cancer Screening"],
-          gradient: "from-blue-50 to-indigo-50",
-          iconBg: "bg-[#0194d0]",
-          link: "/services/general"
-        },
-        {
-          icon: <FaRegSmile className="text-2xl" />,
-          title: "Cosmetic Dentistry",
-          description: "Transform your smile with veneers, bonding, and complete smile makeovers",
-          features: ["Porcelain Veneers", "Dental Bonding", "Smile Design"],
-          gradient: "from-purple-50 to-pink-50",
-          iconBg: "bg-[#0194d0]",
-          link: "/services/cosmetic"
-        },
-        {
-          icon: <FaGem className="text-2xl" />,
-          title: "Dental Implants",
-          description: "Permanent tooth replacement that looks, feels, and functions naturally",
-          features: ["Single Implants", "All-on-4", "Implant Bridges"],
-          gradient: "from-amber-50 to-orange-50",
-          iconBg: "bg-[#0194d0]",
-          popular: true,
-          link: "/services/implants"
-        },
-        {
-          icon: <FaMagic className="text-2xl" />,
-          title: "Teeth Whitening",
-          description: "Professional whitening for a dramatically brighter, more confident smile",
-          features: ["In-Office Whitening", "Take-Home Kits", "Stain Removal"],
-          gradient: "from-cyan-50 to-blue-50",
-          iconBg: "bg-[#0194d0]",
-          link: "/services/whitening"
-        },
-        {
-          icon: <FaEye className="text-2xl" />,
-          title: "Invisalign",
-          description: "Clear aligners that straighten teeth discreetly and comfortably",
-          features: ["Clear Aligners", "Virtual Monitoring", "Express Treatment"],
-          gradient: "from-emerald-50 to-teal-50",
-          iconBg: "bg-[#0194d0]",
-          link: "/services/invisalign"
-        },
-        {
-          icon: <FaAmbulance className="text-2xl" />,
-          title: "Emergency Care",
-          description: "Immediate attention for dental emergencies with same-day appointments",
-          features: ["24/7 Availability", "Pain Management", "Urgent Treatment"],
-          gradient: "from-rose-50 to-red-50",
-          iconBg: "bg-[#0194d0]",
-          link: "/services/emergency"
-        }
-      ].map((service, index) => (
-        <div
-          key={index}
-          className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 xl:gap-8">
+  {[
+    {
+      icon: <FaTooth className="text-lg sm:text-xl md:text-2xl" />,
+      title: "General Dentistry",
+      description: "Preventive care, cleanings, and routine exams for lasting oral health",
+      features: ["Comprehensive Exams", "Professional Cleaning", "Oral Cancer Screening"],
+      gradient: "from-blue-50 to-indigo-50",
+      iconBg: "bg-[#0194d0]",
+      link: "/services/general"
+    },
+    {
+      icon: <FaRegSmile className="text-lg sm:text-xl md:text-2xl" />,
+      title: "Cosmetic Dentistry",
+      description: "Transform your smile with veneers, bonding, and complete smile makeovers",
+      features: ["Porcelain Veneers", "Dental Bonding", "Smile Design"],
+      gradient: "from-purple-50 to-pink-50",
+      iconBg: "bg-[#0194d0]",
+      link: "/services/cosmetic"
+    },
+    {
+      icon: <FaGem className="text-lg sm:text-xl md:text-2xl" />,
+      title: "Dental Implants",
+      description: "Permanent tooth replacement that looks, feels, and functions naturally",
+      features: ["Single Implants", "All-on-4", "Implant Bridges"],
+      gradient: "from-amber-50 to-orange-50",
+      iconBg: "bg-[#0194d0]",
+      popular: true,
+      link: "/services/implants"
+    },
+    {
+      icon: <FaMagic className="text-lg sm:text-xl md:text-2xl" />,
+      title: "Teeth Whitening",
+      description: "Professional whitening for a dramatically brighter, more confident smile",
+      features: ["In-Office Whitening", "Take-Home Kits", "Stain Removal"],
+      gradient: "from-cyan-50 to-blue-50",
+      iconBg: "bg-[#0194d0]",
+      link: "/services/whitening"
+    },
+    {
+      icon: <FaEye className="text-lg sm:text-xl md:text-2xl" />,
+      title: "Invisalign",
+      description: "Clear aligners that straighten teeth discreetly and comfortably",
+      features: ["Clear Aligners", "Virtual Monitoring", "Express Treatment"],
+      gradient: "from-emerald-50 to-teal-50",
+      iconBg: "bg-[#0194d0]",
+      link: "/services/invisalign"
+    },
+    {
+      icon: <FaAmbulance className="text-lg sm:text-xl md:text-2xl" />,
+      title: "Emergency Care",
+      description: "Immediate attention for dental emergencies with same-day appointments",
+      features: ["24/7 Availability", "Pain Management", "Urgent Treatment"],
+      gradient: "from-rose-50 to-red-50",
+      iconBg: "bg-[#0194d0]",
+      link: "/services/emergency"
+    }
+  ].map((service, index) => (
+    <div
+      key={index}
+      className="group relative bg-white rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden"
+    >
+      {/* Background Gradient */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      
+      {/* Top Accent Line */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-[#0194d0] to-[#01d09e] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      
+      {/* Popular Badge */}
+      {service.popular && (
+        <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
+          <div className="bg-[#01d09e] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-md">
+            Most Popular
+          </div>
+        </div>
+      )}
+
+      <div className="relative p-4 sm:p-5 md:p-6 lg:p-8">
+        {/* Icon with Unique Design */}
+        <div className="relative mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+          <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 ${service.iconBg} rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+            {service.icon}
+          </div>
+          <div className="absolute -top-1.5 -right-1.5 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-[#01d09e]/20 rounded-full blur-[2px] sm:blur-sm group-hover:bg-[#01d09e]/30 transition-colors"></div>
+        </div>
+
+        {/* Content */}
+        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-1.5 sm:mb-2 md:mb-3 group-hover:text-[#0194d0] transition-colors">
+          {service.title}
+        </h3>
+        
+        <p className="text-gray-600 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-5 lg:mb-6 line-clamp-2">
+          {service.description}
+        </p>
+
+        {/* Feature List */}
+        <ul className="space-y-1 sm:space-y-1.5 md:space-y-2 mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+          {service.features.map((feature, idx) => (
+            <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base text-gray-600">
+              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#01d09e] rounded-full"></div>
+              <span className="text-xs sm:text-sm">{feature}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Stats/Additional Info */}
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-5 lg:mb-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-100">
+          <div className="text-center">
+            <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-[#0194d0]">Success</div>
+            <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-gray-900">98%</div>
+          </div>
+          <div className="w-px h-4 sm:h-5 md:h-6 lg:h-8 bg-gray-200"></div>
+          <div className="text-center">
+            <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-[#0194d0]">Recovery</div>
+            <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-gray-900">24-48h</div>
+          </div>
+        </div>
+
+        {/* Link Button */}
+        <Link
+          href={service.link}
+          className="inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 text-[#0194d0] font-semibold text-xs sm:text-sm md:text-base group/link"
         >
-          {/* Background Gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-          
-          {/* Top Accent Line */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0194d0] to-[#01d09e] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-          
-          {/* Popular Badge */}
-          {service.popular && (
-            <div className="absolute top-4 right-4 z-10">
-              <div className="bg-[#01d09e] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                Most Popular
-              </div>
-            </div>
-          )}
-
-          <div className="relative p-8">
-            {/* Icon with Unique Design */}
-            <div className="relative mb-6">
-              <div className={`w-16 h-16 ${service.iconBg} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                {service.icon}
-              </div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#01d09e]/20 rounded-full blur-sm group-hover:bg-[#01d09e]/30 transition-colors"></div>
-            </div>
-
-            {/* Content */}
-            <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#0194d0] transition-colors">
-              {service.title}
-            </h3>
-            
-            <p className="text-gray-600 mb-6 line-clamp-2">
-              {service.description}
-            </p>
-
-            {/* Feature List */}
-            <ul className="space-y-2 mb-6">
-              {service.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-[#01d09e] rounded-full"></div>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-
-            {/* Stats/Additional Info */}
-            <div className="flex items-center gap-4 mb-6 pt-4 border-t border-gray-100">
-              <div className="text-center">
-                <div className="text-sm font-semibold text-[#0194d0]">Success Rate</div>
-                <div className="text-lg font-bold text-gray-900">98%</div>
-              </div>
-              <div className="w-px h-8 bg-gray-200"></div>
-              <div className="text-center">
-                <div className="text-sm font-semibold text-[#0194d0]">Recovery</div>
-                <div className="text-lg font-bold text-gray-900">24-48h</div>
-              </div>
-            </div>
-
-            {/* Link Button */}
-            <Link
-              href={service.link}
-              className="inline-flex items-center gap-2 text-[#0194d0] font-semibold group/link"
-            >
-              <span>Learn More</span>
-              <div className="w-6 h-6 rounded-full bg-[#0194d0]/10 flex items-center justify-center group-hover/link:bg-[#0194d0] group-hover/link:translate-x-1 transition-all">
-                <FaArrowRight className="text-xs text-[#0194d0] group-hover/link:text-white transition-colors" />
-              </div>
-            </Link>
+          <span>Learn More</span>
+          <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#0194d0]/10 flex items-center justify-center group-hover/link:bg-[#0194d0] group-hover/link:translate-x-1 transition-all">
+            <FaArrowRight className="text-[8px] sm:text-[10px] md:text-xs text-[#0194d0] group-hover/link:text-white transition-colors" />
           </div>
+        </Link>
+      </div>
 
-          {/* Decorative Corner */}
-          <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-[#0194d0]/5 to-transparent rounded-tl-3xl"></div>
-        </div>
-      ))}
+      {/* Decorative Corner */}
+      <div className="absolute bottom-0 right-0 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-tl from-[#0194d0]/5 to-transparent rounded-tl-xl sm:rounded-tl-2xl"></div>
     </div>
-
-    {/* Service Highlights Banner */}
-    <div className="mt-16 relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0194d0] to-[#01d09e] rounded-2xl blur-xl opacity-30"></div>
-      <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-[#0194d0] mb-2">15+</div>
-            <div className="text-sm text-gray-600">Years Experience</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-[#0194d0] mb-2">10k+</div>
-            <div className="text-sm text-gray-600">Happy Patients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-[#0194d0] mb-2">50+</div>
-            <div className="text-sm text-gray-600">Services Offered</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-[#0194d0] mb-2">24/7</div>
-            <div className="text-sm text-gray-600">Emergency Care</div>
-          </div>
-        </div>
+  ))}
+</div>
+   {/* Service Highlights Banner - Mobile Optimized */}
+<div className="mt-10 md:mt-16 relative">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#0194d0] to-[#01d09e] rounded-xl md:rounded-2xl blur-md md:blur-xl opacity-30"></div>
+  <div className="relative bg-white rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-lg md:shadow-xl border border-gray-100">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
+      <div className="text-center">
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0194d0] mb-0.5 md:mb-1 lg:mb-2">15+</div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-gray-600">Years Exp.</div>
+      </div>
+      <div className="text-center">
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0194d0] mb-0.5 md:mb-1 lg:mb-2">10k+</div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-gray-600">Patients</div>
+      </div>
+      <div className="text-center">
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0194d0] mb-0.5 md:mb-1 lg:mb-2">50+</div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-gray-600">Services</div>
+      </div>
+      <div className="text-center">
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0194d0] mb-0.5 md:mb-1 lg:mb-2">24/7</div>
+        <div className="text-[10px] sm:text-xs md:text-sm text-gray-600">Emergency</div>
       </div>
     </div>
-
+  </div>
+</div>
     {/* Bottom CTA */}
     <div className="text-center mt-16">
       
@@ -854,7 +855,7 @@ useEffect(() => {
                 <h2 className="section-title text-[#0194d0]">Meet Dr. Sarah Smith, DDS</h2>
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="bg-blue-100 text-[#0194d0] px-4 py-2 rounded-full font-semibold">20+ Years Experience</span>
-                  <span className="bg-navy-800 text-white px-4 py-2 rounded-full font-semibold">DDS, FAGD</span>
+                  <span className="bg-blue-100 text-[#0194d0] px-4 py-2 rounded-full font-semibold">DDS, FAGD</span>
                 </div>
                 <p className="text-lg text-gray-700 mb-6">
                   Dr. Smith is a trusted name in {cityName} dentistry, known for combining advanced 
@@ -1101,7 +1102,7 @@ useEffect(() => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="bg-gray-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6 text-[#0194d0] ">Accepted Insurance Plans</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-[#0194d0] ">Accepted Insurance Plans</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                   {[1,2,3,4,5,6].map((i) => (
                     <div key={i} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
