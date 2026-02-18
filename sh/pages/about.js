@@ -85,8 +85,8 @@ const [touchEnd, setTouchEnd] = useState(null);
 
 const doctorImages = [
   { src: '/sh-doc.webp', alt: 'Dr. Juan L. Rodriguez', caption: 'Dr. Juan L. Rodriguez, DDS, MPH, MS' },
-  { src: '/sh-doc1.webp', alt: 'Dr. Rodriguez with patient', caption: 'Dr. Rodriguez with patient' },
-  { src: '/sh-doc2.webp', alt: 'Dr. Rodriguez in clinic', caption: 'Dr. Rodriguez in clinic' }
+  { src: '/sh-doc1.webp', alt: 'Dr. Rodriguez with Family', caption: 'Dr. Rodriguez with Family' },
+  { src: '/sh-doc2.webp', alt: 'Dr. Rodriguez with Family', caption: 'Dr. Rodriguez with Family' }
 ];
 
 // Minimum swipe distance
