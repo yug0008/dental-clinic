@@ -27,7 +27,7 @@ import {
   FaChevronRight
 } from 'react-icons/fa'
 
-export default function AboutPage() {
+ export default function AboutPage() {
   const currentYear = new Date().getFullYear();
 
   const coreValues = [
